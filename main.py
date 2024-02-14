@@ -11,11 +11,13 @@ def printBoard(xState, zState):
     six = 'X' if xState[6] else ('O' if zState[6] else 6)
     seven = 'X' if xState[7] else ('O' if zState[7] else 7)
     eight = 'X' if xState[8] else ('O' if zState[8] else 8)
-    print(f"{zero} | {one} | {two} ")
-    print(f"--|---|---")
-    print(f"{three} | {four} | {five} ")
-    print(f"--|---|---")
-    print(f"{six} | {seven} | {eight} ") 
+    print(" ----------")
+    print(f"|{zero} | {one} | {two} |")
+    print(f"|--|---|---|")
+    print(f"|{three} | {four} | {five} |")
+    print(f"|--|---|---|")
+    print(f"|{six} | {seven} | {eight} | ") 
+    print(" -----------")
 
 def checkWin(xState, zState):
     wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
@@ -47,5 +49,4 @@ if __name__ == "__main__":
         if(cwin != -1):
             print("Match over")
             break
-        
         turn = 1 - turn
